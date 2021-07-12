@@ -1,6 +1,6 @@
 # senfinaça
 
-O senfinanca é uma aplicação para gerenciar transações. Uma vez no site, o usuário pode cadastrar transações de entrada (crédito) ou saída (débito) e acompanhar suas finanças de maneira simplificada e direto ao ponto.
+O senfinança é uma aplicação para gerenciar transações. Uma vez no site, o usuário pode cadastrar transações de entrada (crédito) ou saída (débito) e acompanhar suas finanças de maneira simplificada e direto ao ponto.
 
 A Single Page Application (SPA) foi desenvolvida usando [React JS](https://pt-br.reactjs.org/) e consome dados de um banco NoSQL, [Cloud Firestore](https://firebase.google.com/docs/firestore). Além de React e Firebase, outras tecnologias foram utilizadas no projeto, tais como: [TypeScript](https://www.typescriptlang.org/), [Material UI](https://material-ui.com/), [Recharts](https://recharts.org/en-US/), [Styled Components](https://styled-components.com/) e mais.
 ## Preview
