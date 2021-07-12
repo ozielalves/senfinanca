@@ -13,7 +13,7 @@ import { tableStyles } from "./styles";
 import EditIcon from "@material-ui/icons/Edit";
 import DeleteIcon from "@material-ui/icons/Delete";
 import { Transaction } from "../../models/Transaction";
-import { sortTransactionsByDate, toCurrency } from "../../services/utils";
+import { toCurrency } from "../../services/utils";
 import { useTransactionFilters } from "../../hooks/useTransactionFilters";
 
 interface TransactionsTableProps {
@@ -69,8 +69,7 @@ function TransactionsTable({ onEdit, onDelete }: TransactionsTableProps) {
             </TableRow>
           </TableHead>
           <TableBody>
-            {sortTransactionsByDate(filteredTransactions)
-              .reverse()
+            {filteredTransactions
               .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
               .map((transaction) => (
                 <TableRow

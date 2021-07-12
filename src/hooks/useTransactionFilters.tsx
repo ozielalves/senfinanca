@@ -44,7 +44,7 @@ export function TransactionFiltersProvider({
 
   const applyFilters = useCallback(() => {
     let filteredTransactions = [...transactions];
-    let tempFilters: GenericObject = { ...filters };
+    const tempFilters: GenericObject = { ...filters };
 
     Object.keys(tempFilters).forEach((key) => {
       if (
@@ -74,7 +74,7 @@ export function TransactionFiltersProvider({
   const filterBy = useCallback((filters: Filters) => {
     setFilters((prev) => {
       let newFilters: GenericObject = { ...prev };
-      let tempFilters: GenericObject = { ...filters };
+      const tempFilters: GenericObject = { ...filters };
 
       Object.keys(tempFilters).forEach((key) => {
         newFilters[key] = tempFilters[key];

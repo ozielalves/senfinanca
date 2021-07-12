@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { useTheme } from "@material-ui/core/styles";
 import {
   XAxis,
@@ -11,7 +11,6 @@ import {
   Tooltip,
   Bar,
 } from "recharts";
-import { useSnackbar } from "notistack";
 import { currentMonth, currentMonthName } from "../../services/constants";
 import { Transaction, TransactionType } from "../../models/Transaction";
 import {
@@ -34,7 +33,6 @@ export interface MonthTransaction {
 export default function Chart() {
   const theme = useTheme();
   const { filteredTransactions } = useTransactionFilters();
-  const { enqueueSnackbar } = useSnackbar();
   const [monthTransactions, setMonthTransactions] = useState<
     MonthTransaction[]
   >([]);
@@ -95,7 +93,7 @@ export default function Chart() {
         };
       });
 
-      return mergedTransactions;
+      return mergedTransactions as MonthTransaction[];
     },
 
     [getCreditTransactionsByDate, getDebitTransactionsByDate]
@@ -122,7 +120,7 @@ export default function Chart() {
     } else {
       setMonthTransactions(standardTransactionData);
     }
-  }, [enqueueSnackbar, getCurrentMonthTransactions]);
+  }, [getCurrentMonthTransactions]);
 
   return (
     <Paper height={240}>

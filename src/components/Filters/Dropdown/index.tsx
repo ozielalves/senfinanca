@@ -5,7 +5,7 @@ import { FormHandles, SubmitHandler } from "@unform/core";
 import { Form } from "@unform/web";
 import { useRef, useState } from "react";
 import Button from "../../../components/Button";
-import Select from "../../../components/Form/Select";
+import {Select} from "../../../components/Form";
 import { useTransactionFilters } from "../../../hooks/useTransactionFilters";
 import { Filters } from "../../../models/Filter";
 import {

@@ -1,89 +1,58 @@
 # senfinaças
 
-Green Sales is an app to manage sales! Once on the site, the user is able to register clients with initial credit or initial debt. It is possible to register a sale to an existing customer, the value of which will update debt or credit values in the customer's account.
+O senfinancas é uma aplicação para gerenciar transações. Uma vez no site, o usuário pode cadastrar transações de entrada (crédito) ou saída (débito) e acompanhar suas finanças de maneira simplificada e direto ao ponto.
 
-Green Sales was developed using [React JS](https://pt-br.reactjs.org/) and consumes data from a custom API created using [Firebase](https://firebase.google.com/). Besides React and Firebase, other technologies were employed, such as: [TypeScript](https://www.typescriptlang.org/), [Material UI](https://material-ui.com/), [Recharts](https://recharts.org/en-US/), [Styled Components](https://styled-components.com/) and more.
+A aplicação Single Page Application (SPA) foi desenvolvida usando [React JS](https://pt-br.reactjs.org/) e consome dados de um banco de dados NoSQL, [Cloud Firestore](https://firebase.google.com/docs/firestore). Além de React e Firebase, outras tecnologias foram utilizadas no projeto, tais como: [TypeScript](https://www.typescriptlang.org/), [Material UI](https://material-ui.com/), [Recharts](https://recharts.org/en-US/), [Styled Components](https://styled-components.com/) e mais.
+## Preview
 
-## Features
+É possível visualizar dados de transações anteriores, editar ou deletar se for necessário. Além disso também é possível acompanhar as transações do mês através do gráficoas totalizações de entradas e saídas, e também o saldo restante.
 
-### **Dashboard Page with recent sales and analytical data**
+### **Dashboard**
 
-<img src="src/assets/dashboard.PNG"/>
+<img src="src/assets/images/senfincanca-home.PNG"/>
 
-The dashboard page presents a plot depicting sales made during the day, that was implemented using the Recharts library.
+### **Cadastro de transação**
 
-### **Client Register Page**
+<img src="src/assets/images/senfincanca-cadastro.PNG"/>
 
-<img src="src/assets/clientRegister.PNG"/>
+### **Filtros**
 
-"TextField" input components, from the Material UI library, were used on the client registration page. In addition to form validation, the data also undergoes a content validation before being submitted.
+<img src="src/assets/images/senfincanca-filtros.PNG"/>
 
-### **Client List Page**
+### Filtros implementados:
 
-<img src="src/assets/clientsList.PNG"/>
-
-After registering a client, the user is redirected to the clients listing page, in which customers are displayed in a table on alphabtical order. On each item of the table, it is possible to edit or delete an existing client.
-
-### **Client Editing Modal**
-
-<img src="src/assets/clientEdit.PNG"/>
-
-The client editing modal is displayed whenever the user hits a client editing button. The user is allowed to change all of the informations about a customer, except their email.
-
-### **Client Deletion Confirmation Modal**
-
-<img src="src/assets/clientDelete.PNG"/>
-
-The client deletion confirmation modal is displayed whenever the user hits a client deletion button.
-
-### **Sale Registering Page**
-
-<img src="src/assets/saleRegister.PNG"/>
-
-The sale registering page works in the same fashion as the clients one. For each sale, the user is asked to select an associated customer, it's date and time of occurrence, it's total value and to provide a simple description for identification purposes. Upon a sale's registration, the concerned client's credit or debt will be automatically updated.
-
-### **Sales Listing Page**
-
-<img src="src/assets/salesList.PNG"/>
-
-After registering a sale, the user is redirected to the sales listing page, where the sales are displayed on a table in descending order by their date of occurrence. On each item of the table, it is possible to edit or delete an existing sale.
-
-### **Sale Editing Modal**
-
-<img src="src/assets/saleEdit.PNG"/>
-
-The sale editing modal is displayed whenever the user hits a sale editing button. The user is only allowed to change the sale description and its total value.
-
-### **Sale Deletion Confirmation Modal**
-
-<img src="src/assets/saleDelete.PNG"/>
-
-The sale deletion confirmation modal is displayed whenever the user hits a sale deletion button.
-
-**Obs.:** The notification of errors and successes occurs via snackbar
+- Tipo
+- Categoria
+- Palavra chave (Título)
 
 ## Requirements
 
 - Node.js LTS release or greater
-- Yarn (optional)
-- React JS
+- Yarn (opicional)
 - Git
+
+## Built With
+
+- React (17.0.2)
+- Typescript (4.1.2)
 
 ## Documentation
 
 - [React JS](https://reactnative.dev/docs/environment-setup)
+- [Unform](https://unform.dev)
+- [Cloud Firestore](https://firebase.google.com/docs/firestore)
 
 ### Quick running
 
-Assuming [Git](https://git-scm.com/) and [NodeJS LTS](https://nodejs.org/en/) are installed, it is possible to follow:
+Assumingo que o [Git](https://git-scm.com/) e o [NodeJS LTS](https://nodejs.org/en/) estão instalados, é possível seguir os seguintes passos:
 
-1. Download the project and go to the root directory
+1. Faça clone do projeto e vá para a raiz do repositório
 
    ```bash
-   git clone https://github.com/ozielalves/clients-crud.git && cd client-crud/
+   git clone https://github.com/ozielalves/senfinanca.git && cd senfinanca/
    ```
 
-2. On the repository root directory install the required packages
+2. Na raiz do repositório, instale as dependências necessárias
 
    ```bash
    npm install
@@ -93,7 +62,7 @@ Assuming [Git](https://git-scm.com/) and [NodeJS LTS](https://nodejs.org/en/) ar
    yarn install
    ```
 
-3. Runnning
+3. Rodando o projeto localmente
 
    ```bash
    npm start
@@ -103,7 +72,21 @@ Assuming [Git](https://git-scm.com/) and [NodeJS LTS](https://nodejs.org/en/) ar
    yarn start
    ```
 
-## Building
+Pronto! Será exibida a seguinte mensagem e já é possível codar:
+
+```bash
+Compiled successfully!
+
+You can now view senfinancas in the browser.     
+
+  Local:            http://localhost:3000        
+  On Your Network:  http://192.168.2.111:3000    
+
+Note that the development build is not optimized.
+To create a production build, use yarn build.
+```
+
+## Criando build de produção
 
 ```bash
    npm run build
@@ -113,15 +96,55 @@ Assuming [Git](https://git-scm.com/) and [NodeJS LTS](https://nodejs.org/en/) ar
    yarn run build
 ```
 
-## Contributing
+## Folder Structure
 
-You are welcome to contribute! Create the pull requests.
+```bash
+senfinancas
+├───public
+└───src
+    ├───assets
+    │   ├───icons
+    │   └───images
+    ├───components
+    │   ├───Button
+    │   ├───Chart
+    │   ├───ColoredCard
+    │   ├───Copyright
+    │   ├───Filters
+    │   │   ├───Dropdown
+    │   │   └───Search
+    │   ├───FinanceStatus
+    │   ├───Form
+    │   │   ├───Select
+    │   │   └───TextField
+    │   ├───Header
+    │   ├───Modal
+    │   │   ├───Deletion
+    │   │   ├───Register
+    │   │   └───Selection
+    │   ├───Paper
+    │   ├───SnackbarWapper
+    │   └───Table
+    ├───hooks
+    ├───models
+    │   ├───Filter
+    │   └───Transaction
+    ├───pages
+    │   └───Dashboard
+    ├───services
+    │   └───utils
+    └───theme
+```
 
-For major changes, please, open an issue first to discuss what you would like to change.
+## Contribuições
+
+Fique a vontade para contribuir! Basta criar Pull Requests.
+
+Para maiores modificações, por favor, abrir um issue para discutir o que deve ser modificado.
 
 ## Support
 
-- [Twitter @ozielvales](https://twitter.com/ozielvales) | [E-mail](mailto:ozielalves@ufrn.edu.br)
+- [Twitter @ozielvales](https://twitter.com/ozielvales) | [E-mail](mailto:ozielalves7@gmail.com)
 
 ## Author
 

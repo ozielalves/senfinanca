@@ -7,13 +7,8 @@ import {
   useEffect,
   useState,
 } from "react";
-import {
-  Transaction
-} from "../models/Transaction";
-import {
-  currentDate,
-  transactionCollection,
-} from "../services/constants";
+import { Transaction } from "../models/Transaction";
+import { currentDate, transactionCollection } from "../services/constants";
 import { firestore } from "../services/firebase";
 
 interface FinancesContextProps {
@@ -46,6 +41,7 @@ export function FinancesProvider({ children }: FinancesContextProps) {
     const transactions: Transaction[] = [];
     const snapshot = await firestore
       .collection(transactionCollection)
+      .orderBy("date", "desc")
       .get()
       .catch((error) => {
         enqueueSnackbar("Erro ao recuperar as transações", {

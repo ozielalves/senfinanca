@@ -2,7 +2,7 @@ import { Grid } from "@material-ui/core";
 import { FormHandles, SubmitHandler } from "@unform/core";
 import { Form } from "@unform/web";
 import { useRef, useState } from "react";
-import TextField from "../../../components/Form/TextField";
+import {TextField} from "../../../components/Form";
 import { useTransactionFilters } from "../../../hooks/useTransactionFilters";
 import { Filters } from "../../../models/Filter";
 import SearchIcon from "@material-ui/icons/Search";
