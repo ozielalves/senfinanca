@@ -1,6 +1,6 @@
 import { Grid } from "@material-ui/core";
 import { useSnackbar } from "notistack";
-import ModalBody, { ModalBodyProps } from "..";
+import { ModalBodyProps, ModalBody } from "..";
 import { useFinances } from "../../../hooks/useFinances";
 import { Transaction } from "../../../models/Transaction";
 import { ReactComponent as WarningIcon } from "../../../assets/icons/warning_amber_24px.svg";

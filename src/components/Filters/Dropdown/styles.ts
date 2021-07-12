@@ -1,6 +1,6 @@
 import { IconButton } from "@material-ui/core";
 import styled from "styled-components";
-import { CSSColor } from "../../theme/types";
+import { CSSColor } from "../../../theme/types";
 
 export const FiltersContainer = styled.div`
   position: absolute;

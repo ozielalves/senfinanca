@@ -1,6 +1,6 @@
 import { Grid } from "@material-ui/core";
 import styled from "styled-components";
-import { CSSColor } from "../../theme/types";
+import { CSSColor } from "../../../theme/types";
 
 export const SearchBarWrapper = styled(Grid)`
   button {

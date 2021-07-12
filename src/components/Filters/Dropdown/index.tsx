@@ -4,15 +4,15 @@ import FilterListIcon from "@material-ui/icons/FilterList";
 import { FormHandles, SubmitHandler } from "@unform/core";
 import { Form } from "@unform/web";
 import { useRef, useState } from "react";
-import Button from "../../components/Button";
-import Select from "../../components/Form/Select";
-import { useTransactionFilters } from "../../hooks/useTransactionFilters";
-import { Filters } from "../../models/Filter";
+import Button from "../../../components/Button";
+import Select from "../../../components/Form/Select";
+import { useTransactionFilters } from "../../../hooks/useTransactionFilters";
+import { Filters } from "../../../models/Filter";
 import {
   defaultFilterValue,
   transactionCategories,
   transactionTypes,
-} from "../../services/constants";
+} from "../../../services/constants";
 import { ClearButton, CloseButton, FiltersContainer } from "./styles";
 
 function FiltersDropdown() {

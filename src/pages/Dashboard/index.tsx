@@ -9,14 +9,18 @@ import { useCallback, useState } from "react";
 import Button from "../../components/Button";
 import AddIcon from "@material-ui/icons/Add";
 import Table from "../../components/Table";
-import Filters from "../../Filters/Dropdown";
-import TransactionTypeSelectionModal from "../../components/Modal/Selection";
-import TransactionRegisterModal from "../../components/Modal/Register";
-import TransactionDeletionModal from "../../components/Modal/Deletion";
+import {
+  Dropdown as Filters,
+  Search as SearchBar,
+} from "../../components/Filters";
+import {
+  Deletion as TransactionDeletionModal,
+  Register as TransactionRegisterModal,
+  Selection as TransactionTypeSelectionModal,
+} from "../../components/Modal";
 import { Transaction, TransactionType } from "../../models/Transaction";
 import { TransactionFiltersProvider } from "../../hooks/useTransactionFilters";
 import FinanceStatus from "../../components/FinanceStatus";
-import SearchBar from "../../Filters/Search";
 
 function Dashboard() {
   const classes = dashboardStyles();
@@ -93,7 +97,7 @@ function Dashboard() {
                   <Grid item xs={6} md={4} lg={4}>
                     <Grid container direction="column">
                       <Grid item>
-                        <p className="h3">Olá, Oziel</p>
+                        <p className="h3">Olá,</p>
                       </Grid>
                       <Grid item>
                         <p className="body-secondary">Bem-vindo de volta!</p>

@@ -1,6 +1,6 @@
 import { Grid } from "@material-ui/core";
 import { useState } from "react";
-import ModalBody, { ModalBodyProps } from "..";
+import { ModalBodyProps, ModalBody } from "..";
 import { TransactionType } from "../../../models/Transaction";
 import { CSSColor } from "../../../theme/types";
 import ColoredCard from "../../ColoredCard";

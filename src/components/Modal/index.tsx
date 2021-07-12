@@ -12,6 +12,9 @@ import {
 } from "@material-ui/core";
 import { Title, getModalStyle } from "./styles";
 import Button from "../Button";
+import Register from "./Register";
+import Deletion from "./Deletion";
+import Selection from "./Selection";
 
 export interface ModalBodyProps extends ModalProps {
   /** Title displayed at the top of the modal */
@@ -79,7 +82,7 @@ const ModalBody = (props: ModalBodyProps) => {
     >
       <Grid container style={modalStyle} className={classes.paper}>
         <Grid item xs>
-          <Grid container item justify="space-between" alignItems="center">
+          <Grid container justify="space-between" alignItems="center">
             {props.modalTitle && (
               <Box flexGrow={1}>
                 {typeof props.modalTitle === "string" ? (
@@ -96,7 +99,7 @@ const ModalBody = (props: ModalBodyProps) => {
             </Box>
           </Grid>
         </Grid>
-        <Grid item xs={12} spacing={1}>
+        <Grid item xs={12}>
           {props.children}
         </Grid>
         <Grid item xs={12}>
@@ -154,4 +157,4 @@ const ModalBody = (props: ModalBodyProps) => {
   );
 };
 
-export default ModalBody;
+export { ModalBody, Register, Deletion, Selection };

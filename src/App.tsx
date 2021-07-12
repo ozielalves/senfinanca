@@ -9,7 +9,6 @@ function App() {
     <ThemeProvider theme={theme}>
       <SnackbarWrapper>
         <FinancesProvider>
-          {/* <Routes /> */}
           <Dashboard />
           <GlobalStyle />
         </FinancesProvider>

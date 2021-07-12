@@ -2,16 +2,15 @@ import { Grid, useMediaQuery } from "@material-ui/core";
 import { FormHandles, SubmitHandler } from "@unform/core";
 import { Form } from "@unform/web";
 import { useRef } from "react";
-import ModalBody, { ModalBodyProps } from "..";
+import { ModalBodyProps, ModalBody } from "..";
 import { useFinances } from "../../../hooks/useFinances";
 import { Transaction, TransactionType } from "../../../models/Transaction";
-import TextField from "../../Form/TextField";
-import { Title } from "../styles";
 import { Content, Flag } from "./styles";
+import { Title } from "../styles";
 import * as Yup from "yup";
 import { useSnackbar } from "notistack";
 import { transactionCategories } from "../../../services/constants";
-import Select from "../../Form/Select";
+import { Select, TextField } from "../../Form";
 import Button from "../../Button";
 
 interface TransactionEditModalProps extends Omit<ModalBodyProps, "children"> {
