@@ -28,7 +28,7 @@ A Single Page Application (SPA) foi desenvolvida usando [React JS](https://pt-br
 ## Requirements
 
 - Node.js LTS release or greater
-- Yarn (opicional)
+- Yarn (opcional)
 - Git
 
 ## Built With
@@ -44,7 +44,7 @@ A Single Page Application (SPA) foi desenvolvida usando [React JS](https://pt-br
 
 ### Quick running
 
-Assumingo que o [Git](https://git-scm.com/) e o [NodeJS LTS](https://nodejs.org/en/) estão instalados, é possível seguir os seguintes passos:
+Assumindo que o [Git](https://git-scm.com/) e o [NodeJS LTS](https://nodejs.org/en/) estão instalados, é possível seguir os seguintes passos:
 
 1. Faça clone do projeto e vá para a raiz do repositório
 
@@ -138,7 +138,7 @@ senfinanca
 
 ## Observação
 
-Para amantes do dark mode (eu incluso), utilizo uma extensão que realiza faz essa transição automática, o [Dark Reader](https://chrome.google.com/webstore/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh?hl=pt-BR), e adorei o resultado quando aplicado no senfinanca:
+Para amantes do dark mode (eu incluso), utilizo uma extensão que realiza essa transição automática, o [Dark Reader](https://chrome.google.com/webstore/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh?hl=pt-BR), e adorei o resultado quando aplicado no senfinanca:
 
 <img src="src/assets/images/senfinancas-dark.PNG" alt="Cadastro de transações">
 
@@ -148,7 +148,7 @@ Como primeiro TODO eu coloco a implementação do dark mode!
 
 Fique a vontade para contribuir! Basta criar Pull Requests.
 
-Para maiores modificações, por favor, abrir um issue para discutir o que deve ser modificado.
+Para maiores modificações, por favor, abrir uma issue para discutir o que deve ser modificado.
 
 ## Support
 
