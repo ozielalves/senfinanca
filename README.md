@@ -9,15 +9,15 @@ A aplicação Single Page Application (SPA) foi desenvolvida usando [React JS](h
 
 ### **Dashboard**
 
-<img src="src\assets\images\senfincanca-home.PNG"/>
+<img src="src/assets/images/senfinaca-home.PNG" alt="Dashboard">
 
 ### **Cadastro de transação**
 
-<img src="src\assets\images\senfincanca-cadastro.PNG"/>
+<img src="src/assets/images/senfinanca-cadastro.PNG" alt="Cadastro de transações">
 
 ### **Filtros**
 
-<img src="src\assets\images\senfincanca-filtros.PNG"/>
+<img src="src/assets/images/senfinanca-filtros.PNG" alt="Filtros">
 
 ### Filtros implementados:
 
