@@ -1,4 +1,4 @@
-import { Grid } from "@material-ui/core";
+import { Grid, useMediaQuery } from "@material-ui/core";
 import { FormHandles, SubmitHandler } from "@unform/core";
 import { Form } from "@unform/web";
 import { useRef } from "react";
@@ -37,6 +37,7 @@ function TransactionRegisterModal({
 }: TransactionEditModalProps) {
   const formRef = useRef<FormHandles>(null);
   const { enqueueSnackbar } = useSnackbar();
+  const smallDevice = useMediaQuery("(max-width:512px)");
   const { createTransaction, editTransaction, fetchTransactions } =
     useFinances();
 
@@ -120,9 +121,11 @@ function TransactionRegisterModal({
               : "Cadastro de transação"}
           </Title>
         </Grid>
-        <Grid item>
-          <Flag type={transactionType}>{transactionType}</Flag>
-        </Grid>
+        {!smallDevice && (
+          <Grid item>
+            <Flag type={transactionType}>{transactionType}</Flag>
+          </Grid>
+        )}
       </Grid>
     );
   };

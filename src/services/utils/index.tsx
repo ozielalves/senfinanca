@@ -1,8 +1,13 @@
+import { MonthTransaction } from "../../components/Chart";
 import { Transaction, TransactionType } from "../../models/Transaction";
 import { monthNames } from "../constants";
 
-export function createTransactionData(date: string, value: number) {
-  return { date, value };
+export function createTransactionData(date: string): MonthTransaction {
+  return {
+    date,
+    Crédito: 0,
+    Débito: 0,
+  } as MonthTransaction;
 }
 
 export function getChartDateLabel(date: Date): string {
@@ -18,18 +23,7 @@ export function sortTransactionsByDate(array: Transaction[]): Transaction[] {
   return sortedArray;
 }
 
-export function getModalStyle() {
-  const top = 50;
-  const left = 50;
-
-  return {
-    top: `${top}%`,
-    left: `${left}%`,
-    transform: `translate(-${top}%, -${left}%)`,
-  };
-}
-
-export function getTotalDebt(
+export function getTotalDebit(
   transactions: Transaction[],
   formatted: boolean = false
 ): string | number {
@@ -59,7 +53,7 @@ export function getTotalBalance(
   transactions: Transaction[],
   formatted: boolean = false
 ): string | number {
-  const totalDebt = getTotalDebt(transactions) as number;
+  const totalDebt = getTotalDebit(transactions) as number;
   const totalCredit = getTotalCredit(transactions) as number;
   const totalBalance = totalCredit - totalDebt;
   if (formatted) {

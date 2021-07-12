@@ -1,7 +1,7 @@
 import { Grid } from "@material-ui/core";
 import styled from "styled-components";
 import { TransactionType } from "../../../models/Transaction";
-import { CSSColor } from "./../../../theme/types";
+import { CSSColor } from "../../../theme/types";
 
 interface FlagProps {
   type: TransactionType;

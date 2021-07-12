@@ -11,7 +11,7 @@ import AddIcon from "@material-ui/icons/Add";
 import Table from "../../components/Table";
 import Filters from "../../Filters/Dropdown";
 import TransactionTypeSelectionModal from "../../components/Modal/Selection";
-import TransactionRegisterModal from "../../components/Modal/TransactionRegister";
+import TransactionRegisterModal from "../../components/Modal/Register";
 import TransactionDeletionModal from "../../components/Modal/Deletion";
 import { Transaction, TransactionType } from "../../models/Transaction";
 import { TransactionFiltersProvider } from "../../hooks/useTransactionFilters";

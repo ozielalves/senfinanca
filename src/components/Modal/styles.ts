@@ -1,24 +1,24 @@
-import { makeStyles, createStyles } from "@material-ui/core";
 import styled from "styled-components";
 import { CSSColor } from "../../theme/types";
 
-export const useModalStyles = makeStyles((theme) =>
-  createStyles({
-    paper: {
-      position: "absolute",
-      width: 512,
-      backgroundColor: theme.palette.background.paper,
-      border: "none",
-      borderRadius: "10px",
-      padding: theme.spacing(3),
-      outline: "none",
-    },
-  })
-);
-
 export const Title = styled.p`
   font-weight: bold;
-  font-size: 25px;
+  font-size: 20px;
   line-height: 38px;
   color: ${CSSColor.Primary};
+
+  @media screen and (max-width: 512px) {
+    font-size: 16px;
+  }
 `;
+
+export function getModalStyle() {
+  const top = 50;
+  const left = 50;
+
+  return {
+    top: `${top}%`,
+    left: `${left}%`,
+    transform: `translate(-${top}%, -${left}%)`,
+  };
+}

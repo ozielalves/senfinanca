@@ -5,7 +5,7 @@ import { defaultFilterValue } from "../../services/constants";
 import {
   getTotalBalance,
   getTotalCredit,
-  getTotalDebt,
+  getTotalDebit,
 } from "../../services/utils";
 import { CSSColor } from "../../theme/types";
 import ColoredCard from "../ColoredCard";
@@ -83,7 +83,7 @@ function FinanceStatus() {
               </Grid>
               <Grid item>
                 <p className="card-value error">
-                  {getTotalDebt(getFilteredTransactions(), true)}
+                  {getTotalDebit(getFilteredTransactions(), true)}
                 </p>
               </Grid>
             </Grid>

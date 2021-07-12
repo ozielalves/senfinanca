@@ -8,7 +8,7 @@ export const Description = styled.div`
   margin-bottom: 20px;
 
   p {
-    font-size: 18px;
+    font-size: 16px;
     color: ${CSSColor.Text};
     text-align: center;
   }

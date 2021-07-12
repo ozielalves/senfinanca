@@ -1,8 +1,16 @@
 import React, { ReactNode } from "react";
 import { Close } from "@material-ui/icons";
-import { Box, Grid, IconButton, Modal, ModalProps } from "@material-ui/core";
-import { getModalStyle } from "../../services/utils";
-import { Title, useModalStyles } from "./styles";
+import {
+  Box,
+  createStyles,
+  Grid,
+  IconButton,
+  makeStyles,
+  Modal,
+  ModalProps,
+  useMediaQuery,
+} from "@material-ui/core";
+import { Title, getModalStyle } from "./styles";
 import Button from "../Button";
 
 export interface ModalBodyProps extends ModalProps {
@@ -41,8 +49,26 @@ export interface ModalBodyProps extends ModalProps {
   onClose?: () => void;
 }
 const ModalBody = (props: ModalBodyProps) => {
-  const classes = useModalStyles();
   const [modalStyle] = React.useState(getModalStyle);
+
+  const mediumDevice = useMediaQuery("(min-width:512px)");
+  const smallDevice = useMediaQuery("(min-width:344px)");
+
+  const useModalStyles = makeStyles((theme) =>
+    createStyles({
+      paper: {
+        position: "absolute",
+        width: mediumDevice ? 512 : smallDevice ? 344 : 280,
+        backgroundColor: theme.palette.background.paper,
+        border: "none",
+        borderRadius: "10px",
+        padding: theme.spacing(3),
+        outline: "none",
+      },
+    })
+  );
+
+  const classes = useModalStyles();
 
   return (
     <Modal
@@ -82,7 +108,7 @@ const ModalBody = (props: ModalBodyProps) => {
           >
             {props.tertiaryButtonText && (
               <Button
-                id="modal-secondary-button"
+                id="modal-tertiary-button"
                 disabled={props.tertiaryButtonDisable}
                 width="135px"
                 onClick={() =>

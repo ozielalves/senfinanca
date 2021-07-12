@@ -42,8 +42,6 @@ export function TransactionFiltersProvider({
     setFilteredTransactions(transactions);
   }, [transactions]);
 
-  console.log("filters: ", filters); //PRINT
-
   const applyFilters = useCallback(() => {
     let filteredTransactions = [...transactions];
     let tempFilters: GenericObject = { ...filters };
@@ -81,7 +79,7 @@ export function TransactionFiltersProvider({
       Object.keys(tempFilters).forEach((key) => {
         newFilters[key] = tempFilters[key];
       });
-      
+
       return newFilters as Filters;
     });
   }, []);

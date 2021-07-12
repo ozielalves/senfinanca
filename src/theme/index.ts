@@ -57,7 +57,7 @@ h1, h2, h3, h4, h5, h6, strong {
   font-weight: 600;
 }
 span.error {
-  color: var(--error);
+  color: ${HEXColor.Error};
 }
 html {
   @media (max-width: 1080px) {

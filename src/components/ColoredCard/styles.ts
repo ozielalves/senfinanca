@@ -15,7 +15,7 @@ export const Card = styled.div<ColoredCardProps>`
   cursor: ${({ clickable }) => (clickable ? "pointer" : "unset")};
   opacity: ${({ selected }) => (selected ? "0.7" : "1")};
   box-shadow: ${({ selected }) =>
-  selected ? "0px 0px 20px rgba(0, 0, 0, 0.3)" : "unset"};
+    selected ? "0px 0px 20px rgba(0, 0, 0, 0.3)" : "unset"};
 
   &:hover {
     opacity: ${({ clickable }) => (clickable ? "0.7" : "1")};
@@ -40,6 +40,10 @@ export const Card = styled.div<ColoredCardProps>`
   p.card-title {
     font-weight: bold;
     font-size: 24px;
+
+    @media screen and (max-width: 512px) {
+      font-size: 20px;
+    }
   }
   p.card-value {
     font-size: 24px;

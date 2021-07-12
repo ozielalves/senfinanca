@@ -8,9 +8,7 @@ import {
   useState,
 } from "react";
 import {
-  Transaction,
-  TransactionCategory,
-  TransactionType,
+  Transaction
 } from "../models/Transaction";
 import {
   currentDate,
@@ -31,8 +29,6 @@ interface FinancesContextData {
   ) => Promise<Transaction | undefined>;
   editTransaction: (transaction: Transaction) => Promise<void>;
   deleteTransaction: (tansactionId: string) => Promise<void>;
-  filterByType: (type: TransactionType) => void;
-  filterByCategory: (category: TransactionCategory) => void;
 }
 
 const TransactionsContext = createContext<FinancesContextData>(
@@ -65,7 +61,7 @@ export function FinancesProvider({ children }: FinancesContextProps) {
           date: _data.data().date.toDate(),
         } as Transaction)
       );
-      console.log(transactions); // PRINT
+
       setTransactions(transactions);
       setFilteredTransactions(transactions);
     }
@@ -128,23 +124,6 @@ export function FinancesProvider({ children }: FinancesContextProps) {
     [enqueueSnackbar]
   );
 
-  const filterByType = useCallback(
-    (type: TransactionType) => {
-      const filteredTrasactions = transactions.filter((t) => t.type === type);
-      setFilteredTransactions(filteredTrasactions);
-    },
-    [transactions]
-  );
-  const filterByCategory = useCallback(
-    (typcategory: TransactionCategory) => {
-      const filteredTrasactions = transactions.filter(
-        (t) => t.category === typcategory
-      );
-      setFilteredTransactions(filteredTrasactions);
-    },
-    [transactions]
-  );
-
   return (
     <TransactionsContext.Provider
       value={{
@@ -154,8 +133,6 @@ export function FinancesProvider({ children }: FinancesContextProps) {
         createTransaction,
         deleteTransaction,
         editTransaction,
-        filterByType,
-        filterByCategory,
       }}
     >
       {children}
