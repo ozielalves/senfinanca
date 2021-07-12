@@ -138,7 +138,7 @@ senfinancas
 
 ## Observação
 
-Para amantes do dark mode (eu incluso), utilizo uma extensão que realiza faz essa transição automática, o [Dark Reader](https://chrome.google.com/webstore/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh?hl=pt-BR), e adorei o resultado quando aplicado no senfinancas:
+Para amantes do dark mode (eu incluso), utilizo uma extensão que realiza faz essa transição automática, o [Dark Reader](https://chrome.google.com/webstore/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh?hl=pt-BR), e adorei o resultado quando aplicado no senfinanca:
 
 <img src="src/assets/images/senfinancas-dark.PNG" alt="Cadastro de transações">
 
