@@ -5,7 +5,7 @@ O senfinança é uma aplicação para gerenciar transações. Uma vez no site, o
 A Single Page Application (SPA) foi desenvolvida usando [React JS](https://pt-br.reactjs.org/) e consome dados de um banco NoSQL, [Cloud Firestore](https://firebase.google.com/docs/firestore). Além de React e Firebase, outras tecnologias foram utilizadas no projeto, tais como: [TypeScript](https://www.typescriptlang.org/), [Material UI](https://material-ui.com/), [Recharts](https://recharts.org/en-US/), [Styled Components](https://styled-components.com/) e mais.
 ## Preview
 
-É possível visualizar dados de transações anteriores, editar ou deletar se for necessário. Além disso também é possível acompanhar as transações do mês através do gráficoas totalizações de entradas e saídas, e também o saldo restante.
+É possível visualizar dados de transações anteriores, editar ou deletar se for necessário. Além disso também é possível acompanhar as transações do mês através do gráfico, totalizações de entradas e saídas, e também o saldo restante.
 
 ### **Dashboard**
 
