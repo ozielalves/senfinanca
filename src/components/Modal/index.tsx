@@ -82,7 +82,7 @@ const ModalBody = (props: ModalBodyProps) => {
     >
       <Grid container style={modalStyle} className={classes.paper}>
         <Grid item xs>
-          <Grid container justify="space-between" alignItems="center">
+          <Grid container justifyContent="space-between" alignItems="center">
             {props.modalTitle && (
               <Box flexGrow={1}>
                 {typeof props.modalTitle === "string" ? (
@@ -106,7 +106,7 @@ const ModalBody = (props: ModalBodyProps) => {
           <Grid
             container
             alignItems="flex-end"
-            justify={props.buttonsJustify ?? "space-between"}
+            justifyContent={props.buttonsJustify ?? "space-between"}
             direction="row"
           >
             {props.tertiaryButtonText && (

@@ -167,12 +167,10 @@ function TransactionRegisterModal({
           </Grid>
         </Content>
         <Grid
-          item
-          xs={12}
+          container
           spacing={1}
-          style={{ display: "flex" }}
           alignItems="flex-end"
-          justify={"space-between"}
+          justifyContent="space-between"
           direction="row"
         >
           <Button
@@ -189,7 +187,6 @@ function TransactionRegisterModal({
             type="submit"
             width="135px"
             variant="contained"
-            style={{ marginLeft: 40 }}
           >
             {selectedTransaction ? "Editar" : "Cadastrar"}
           </Button>
