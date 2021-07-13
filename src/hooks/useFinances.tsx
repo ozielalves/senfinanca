@@ -17,7 +17,6 @@ interface FinancesContextProps {
 
 interface FinancesContextData {
   transactions: Transaction[];
-  filteredTransactions: Transaction[];
   fetchTransactions: () => Promise<void>;
   createTransaction: (
     transaction: Transaction
@@ -32,9 +31,6 @@ const TransactionsContext = createContext<FinancesContextData>(
 
 export function FinancesProvider({ children }: FinancesContextProps) {
   const [transactions, setTransactions] = useState<Transaction[]>([]);
-  const [filteredTransactions, setFilteredTransactions] = useState<
-    Transaction[]
-  >([]);
   const { enqueueSnackbar } = useSnackbar();
 
   const fetchTransactions = useCallback(async () => {
@@ -59,7 +55,6 @@ export function FinancesProvider({ children }: FinancesContextProps) {
       );
 
       setTransactions(transactions);
-      setFilteredTransactions(transactions);
     }
   }, [enqueueSnackbar]);
 
@@ -124,7 +119,6 @@ export function FinancesProvider({ children }: FinancesContextProps) {
     <TransactionsContext.Provider
       value={{
         transactions,
-        filteredTransactions,
         fetchTransactions,
         createTransaction,
         deleteTransaction,
