@@ -47,7 +47,9 @@ function TransactionRegisterModal({
         category: Yup.string().required(
           "A categoria da transação é obrigatório"
         ),
-        value: Yup.string().required("O valor da transação é obrigatório"),
+        value: Yup.string()
+          .required("O valor da transação é obrigatório")
+          .matches(/^\d+$/, "Apenas dígitos para o campo de valor")
       });
 
       await schema
