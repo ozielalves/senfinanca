@@ -3,7 +3,8 @@
 O senfinança é uma aplicação para gerenciar transações. Uma vez no site, o usuário pode cadastrar transações de entrada (crédito) ou saída (débito) e acompanhar suas finanças de maneira simplificada e direto ao ponto.
 
 A Single Page Application (SPA) foi desenvolvida usando [React JS](https://pt-br.reactjs.org/) e consome dados de um banco NoSQL, [Cloud Firestore](https://firebase.google.com/docs/firestore). Além de React e Firebase, outras tecnologias foram utilizadas no projeto, tais como: [TypeScript](https://www.typescriptlang.org/), [Material UI](https://material-ui.com/), [Recharts](https://recharts.org/en-US/), [Styled Components](https://styled-components.com/) e mais.
-## Preview
+
+## [Preview](https://senfinanca.web.app) - [Protótipo](https://www.figma.com/file/CJ3cKns1RTZCFROuxaW1ct/senfinan%C3%A7a?node-id=0%3A1)
 
 É possível visualizar dados de transações anteriores, editar ou deletar se for necessário. Além disso também é possível acompanhar as transações do mês através do gráfico, totalizações de entradas e saídas, e também o saldo restante.
 
@@ -138,7 +139,7 @@ senfinanca
 
 ## Observação
 
-Para amantes do dark mode (eu incluso), utilizo uma extensão que realiza essa transição automática, o [Dark Reader](https://chrome.google.com/webstore/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh?hl=pt-BR), e adorei o resultado quando aplicado no senfinanca:
+Para amantes do dark mode (eu incluso), utilizo uma extensão que realiza essa transição automática, o [Dark Reader](https://chrome.google.com/webstore/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh?hl=pt-BR), e adorei o resultado quando aplicado no senfinança:
 
 <img src="src/assets/images/senfinancas-dark.PNG" alt="Cadastro de transações">
 
