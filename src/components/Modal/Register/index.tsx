@@ -47,9 +47,7 @@ function TransactionRegisterModal({
         category: Yup.string().required(
           "A categoria da transação é obrigatório"
         ),
-        value: Yup.string()
-          .required("O valor da transação é obrigatório")
-          .matches(/^\d+$/, "Apenas dígitos para o campo de valor")
+        value: Yup.string().required("O valor da transação é obrigatório"),
       });
 
       await schema
@@ -164,6 +162,9 @@ function TransactionRegisterModal({
             <TextField
               name="value"
               placeholder="Valor"
+              type="number"
+              pattern="[0-9]+([\.,][0-9]+)?"
+              step="0.01"
               defaultValue={selectedTransaction?.value}
             />
           </Grid>
