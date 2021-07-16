@@ -1,4 +1,4 @@
-# senfinaça
+# senfinaça [![npm](https://img.shields.io/npm/v/npm.svg?style=flat-square)](https://www.npmjs.com/package/npm) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 O senfinança é uma aplicação para gerenciar transações. Uma vez no site, o usuário pode cadastrar transações de entrada (crédito) ou saída (débito) e acompanhar suas finanças de maneira simplificada e direto ao ponto.
 
